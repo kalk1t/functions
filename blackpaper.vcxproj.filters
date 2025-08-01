@@ -18,16 +18,5 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="factorization.h">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="unlimited_random_prime_num.h">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="random_prime_number.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

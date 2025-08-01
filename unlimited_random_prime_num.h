@@ -1,7 +1,4 @@
 
-#define MAX_SIZE 128
-
-
 char* dword_to_string(DWORD processID) {
 	char* buffer = malloc(MAX_SIZE);
 	if (!buffer) {
@@ -12,71 +9,23 @@ char* dword_to_string(DWORD processID) {
 	return buffer;
 }
 
-char* mul_str(const char* a, const char* b) {
-
-}
-
-char* rand_num(char* processID) {
-	
-	/*DWORD rand_num = processID * processID * (processID % 11) * (processID % 37);
-	if (rand_num == 0) {
-		rand_num = processID * processID * (processID % 11) * (processID % 21);
-	}*/
-
-	//return rand_num;
-}
-
-//it searchs right side of random_num
-DWORD prime_near_random_num(DWORD random_num) {
-	DWORD prime_number = 0;
-	if (random_num == 0) {
-		return 0;
-	}
-	BOOL isprime = FALSE;
-	while (!isprime) {
-		for (DWORD next_number = random_num; next_number; next_number++) {
-			for (DWORD i = 2; i <= next_number; i++) {
-
-				if ((next_number / i) == 1 && (next_number % i) == 0) {
-					isprime = TRUE;
-					prime_number = next_number;
-					break;
-				}
-				else if ((next_number % i) == 0) {
-					printf("next_number(%lu) : divisor(%lu) = result(%lu),remainder(%lu)\n", next_number, i, next_number / i, next_number % i);
-					break;
-				}
-			}
-			if (isprime) {
-				break;
-			}
-
-			printf("Not prime\n");
-			printf("-----------------------\n");
-			printf("Next_number :%lu\n", next_number + 1);
-
-		}
-	}
-	return prime_number;
-}
-
-char* get_100k_number(const char* path,size_t* len) {
+char* get_100k_number(const char* path, size_t* len) {
 
 	FILE* num_100k = fopen(path, "rb");
 	if (!num_100k) {
 		printf("Error opening num_100k.txt\n");
-		return 1;
+		return NULL;
 	}
 	if (fseek(num_100k, 0, SEEK_END) != 0) {
 		printf("Error seeking to end of file\n");
 		fclose(num_100k);
-		return 1;
+		return NULL;
 	}
 	long size = ftell(num_100k);
 	if (size < 0) {
 		printf("Error getting file size\n");
 		fclose(num_100k);
-		return 1;
+		return NULL;
 	}
 	rewind(num_100k);
 
@@ -123,9 +72,9 @@ char* multiply(const char* a, const char* b) {
 		for (size_t j = 0; j < n2; j++) {
 			int m2 = b[n2 - j - 1] - '0';
 
-			if ((res[i + j] + ((m1 * m2 ) % 10)) >= 10) {
-				res[i + j] += (m1 * m2 ) % 10;
-				res[i + j + 1] += (m1*m2) / 10;
+			if ((res[i + j] + ((m1 * m2) % 10)) >= 10) {
+				res[i + j] += (m1 * m2) % 10;
+				res[i + j + 1] += (m1 * m2) / 10;
 				if (res[i + j + 1] >= 10) {
 					res[i + j + 2] += res[i + j + 1] / 10;
 					res[i + j + 1] = res[i + j + 1] % 10;
@@ -133,7 +82,7 @@ char* multiply(const char* a, const char* b) {
 				res[i + j] = res[i + j] % 10;
 			}
 			else {
-				res[i + j] += (m1 * m2 ) % 10;
+				res[i + j] += (m1 * m2) % 10;
 				if (m1 * m2 >= 10) {
 					res[i + j + 1] += (m1 * m2) / 10;
 					if (res[i + j + 1] >= 10) {
@@ -142,7 +91,7 @@ char* multiply(const char* a, const char* b) {
 					}
 
 				}
-				
+
 			}
 
 			//printf("m1(%d) * m2(%d)= remainder(%d) ,addtonextnumber(%d)\n", m1, m2, res[i + j], result);
@@ -152,7 +101,7 @@ char* multiply(const char* a, const char* b) {
 		result = 0;
 	}
 	size_t size = sizeof(res);
-	char* multiplied_result = malloc(8+1);
+	char* multiplied_result = malloc(8 + 1);
 
 
 	for (int i = sizeof(res) - 2, j = 0; i >= 0; i--) {

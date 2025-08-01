@@ -19,12 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="factorization.h" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="unlimited_random_prime_num.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="random_prime_number.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
