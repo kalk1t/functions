@@ -1,0 +1,67 @@
+﻿  factorization.h
+C:\Users\giorg\workingspace\blackpaper\factorization.h(2,21): error C2065: 'DWORD': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\factorization.h(2,27): error C2146: syntax error: missing ')' before identifier 'number'
+C:\Users\giorg\workingspace\blackpaper\factorization.h(2,35): error C2143: syntax error: missing ';' before '{'
+C:\Users\giorg\workingspace\blackpaper\factorization.h(2,35): error C2447: '{': missing function header (old-style formal list?)
+  unlimited_random_prime_num.h
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(5,23): error C2065: 'DWORD': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(5,29): error C2146: syntax error: missing ')' before identifier 'processID'
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(5,40): error C2143: syntax error: missing ';' before '{'
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(5,40): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(30,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(30,7): error C2146: syntax error: missing ';' before identifier 'prime_near_random_num'
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(30,47): error C2143: syntax error: missing ';' before '{'
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(30,47): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(65,2): error C2065: 'FILE': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(65,8): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(65,19): error C3861: 'fopen': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(66,7): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(67,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(68,10): error C2440: 'return': cannot convert from 'int' to 'char *'
+      C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(68,10):
+      Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(70,12): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(70,25): error C2065: 'SEEK_END': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(70,6): error C3861: 'fseek': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(71,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(72,10): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(72,3): error C3861: 'fclose': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(73,10): error C2440: 'return': cannot convert from 'int' to 'char *'
+      C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(73,10):
+      Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(75,20): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(75,14): error C3861: 'ftell': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(77,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(78,10): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(78,3): error C3861: 'fclose': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(79,10): error C2440: 'return': cannot convert from 'int' to 'char *'
+      C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(79,10):
+      Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(81,9): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(81,2): error C3861: 'rewind': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(84,17): error C3861: 'malloc': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(86,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(87,10): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(87,3): error C3861: 'fclose': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(88,10): error C2065: 'NULL': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(90,47): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(90,16): error C3861: 'fread': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(92,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(93,3): error C3861: 'free': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(94,10): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(94,3): error C3861: 'fclose': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(95,10): error C2065: 'NULL': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(98,9): error C2065: 'num_100k': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(98,2): error C3861: 'fclose': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(107,14): error C3861: 'strlen': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(108,14): error C3861: 'strlen': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(110,10): error C2065: 'NULL': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(114,13): error C3861: 'calloc': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(116,10): error C2065: 'NULL': undeclared identifier
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(150,3): error C3861: 'printf': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(155,28): error C3861: 'malloc': identifier not found
+C:\Users\giorg\workingspace\blackpaper\unlimited_random_prime_num.h(162,2): error C3861: 'free': identifier not found
+  Generating Code...

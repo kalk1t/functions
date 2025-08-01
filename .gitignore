@@ -1,7 +1,13 @@
-x64/
-blackpaper/
-blackpaper.sln
-blackpaper.vcxproj
-blackpaper.vcxproj.filters
-blackpaper.vcxproj.user
-*.txt
+# IDE folders
+.vs/
+.vscode/
+
+# Build outputs
+build/
+bin/
+*.o
+*.exe
+
+# Libraries you don’t want in the repo
+glfw/
+
