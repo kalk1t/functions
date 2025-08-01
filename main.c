@@ -42,8 +42,8 @@ int main() {
 	free(dw_string);
 	*/
 	//multiply string to string
-	char* string_1 = "6832";
-	char* string_2 = "7584";
+	char* string_1 = "68323";
+	char* string_2 = "75843";
 	char* multiplied = multiply(string_1, string_2);
 	printf("multiplied strings :%s\n", multiplied);
 	free(multiplied);
