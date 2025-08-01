@@ -63,8 +63,8 @@ char* multiply(const char* a, const char* b) {
 	if (a_len == 0 || b_len == 0) {
 		return NULL;
 	}
-	
 
+	
 
 	for (int i = 0;i < b_len;i++) {
 		int first_operand = a[a_len - i - 1] - '0';
