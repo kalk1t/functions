@@ -52,62 +52,48 @@ char* get_100k_number(const char* path, size_t* len) {
 
 char* multiply(const char* a, const char* b) {
 
+	size_t a_len = strlen(a);
+	size_t b_len = strlen(b);
+	size_t max_len = a_len + b_len;
 
-	size_t n1 = strlen(a);
-	size_t n2 = strlen(b);
-	if (n1 == 0 || n2 == 0) {
+	int* multiplied_result = calloc(max_len+1, sizeof(int));
+	if (multiplied_result == 0) {
 		return NULL;
 	}
-
-	size_t result_size = n1 + n2;
-	int* res = calloc(result_size + 1, sizeof(int));
-	if (!res) {
+	if (a_len == 0 || b_len == 0) {
 		return NULL;
 	}
-	int remainder = 0;
-	int result = 0;
-	int	main_remainder = 0;
-	for (size_t i = 0; i < n1; i++) {
-		int m1 = a[n1 - i - 1] - '0';
-		for (size_t j = 0; j < n2; j++) {
-			int m2 = b[n2 - j - 1] - '0';
+	
 
-			if ((res[i + j] + ((m1 * m2) % 10)) >= 10) {
-				res[i + j] += (m1 * m2) % 10;
-				res[i + j + 1] += (m1 * m2) / 10;
-				if (res[i + j + 1] >= 10) {
-					res[i + j + 2] += res[i + j + 1] / 10;
-					res[i + j + 1] = res[i + j + 1] % 10;
-				}
-				res[i + j] = res[i + j] % 10;
-			}
-			else {
-				res[i + j] += (m1 * m2) % 10;
-				if (m1 * m2 >= 10) {
-					res[i + j + 1] += (m1 * m2) / 10;
-					if (res[i + j + 1] >= 10) {
-						res[i + j + 2] += res[i + j + 1] / 10;
-						res[i + j + 1] = res[i + j + 1] % 10;
-					}
 
-				}
-
-			}
-
-			//printf("m1(%d) * m2(%d)= remainder(%d) ,addtonextnumber(%d)\n", m1, m2, res[i + j], result);
+	for (int i = 0;i < b_len;i++) {
+		int first_operand = a[a_len - i - 1] - '0';
+		if (first_operand == 0) {
+			continue;
 		}
-		printf("i=%d - [%d]%d,[%d]%d,[%d]%d,[%d]%d\n", i, res[i + 0], i + 0, res[i + 1], i + 1, res[i + 2], i + 2, res[i + 3], i + 3);
-
-		result = 0;
+		for (int j = 0;j < a_len ;j++) {
+			int second_operand = b[b_len - j - 1] - '0';
+			if (second_operand == 0) {
+				break;
+			}
+			multiplied_result[i + j] += first_operand * second_operand;
+			if (multiplied_result[i + j] >= 10) {
+				multiplied_result[i + j + 1] += multiplied_result[i + j] / 10;
+				multiplied_result[i + j] %= 10;
+			}
+		}
 	}
-	size_t size = sizeof(res);
-	char* multiplied_result = malloc(8 + 1);
 
-
-	for (int i = sizeof(res) - 2, j = 0; i >= 0; i--) {
-		multiplied_result[j++] = res[i] + '0';
+	char* result = calloc(max_len+1, sizeof(char));
+	if (result == 0) {
+		return NULL;
 	}
-	multiplied_result[size - 1] = '\0'; // Null-terminate the string
-	free(res);
-	return multiplied_result;
+	int count = 0;
+	for (int i = max_len - 1;i >= 0;i--) {
+			result[count++] = (unsigned char)multiplied_result[i] + '0';
+	}
+	result[count] = '\0';
+
+	free(multiplied_result);
+	return result;
 }

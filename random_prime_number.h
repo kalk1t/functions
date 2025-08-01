@@ -1,8 +1,8 @@
 
 DWORD rand_num_gen(DWORD processID) {
-	DWORD rand_num = processID * processID * (processID % 11) * (processID % 37);
+	DWORD rand_num = processID * processID / (processID % 33);
 	if (rand_num == 0) {
-		rand_num = processID * processID / (processID % 11) * (processID % 21);
+		rand_num = processID * processID / (processID % 21);
 		if (rand_num == 0) {
 			perror("rand_num is 0");
 		}

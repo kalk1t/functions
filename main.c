@@ -35,14 +35,18 @@ int main() {
 	free(factorized);
 	*/
 
-	//dword to string
 	/*
+	//dword to string
 	char* dw_string = dword_to_string(random_num);
 	printf("random number to string : %s\n", dw_string);
 	free(dw_string);
 	*/
-
-
+	//multiply string to string
+	char* string_1 = "6832";
+	char* string_2 = "7584";
+	char* multiplied = multiply(string_1, string_2);
+	printf("multiplied strings :%s\n", multiplied);
+	free(multiplied);
 
 	clock_t end_time = clock();
 	double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
