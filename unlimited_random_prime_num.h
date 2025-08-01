@@ -56,7 +56,7 @@ char* multiply(const char* a, const char* b) {
 	size_t b_len = strlen(b);
 	size_t max_len = a_len + b_len;
 
-	int* multiplied_result = calloc(max_len+1, sizeof(int));
+	int* multiplied_result = calloc(max_len + 1, sizeof(int));
 	if (multiplied_result == 0) {
 		return NULL;
 	}
@@ -64,14 +64,22 @@ char* multiply(const char* a, const char* b) {
 		return NULL;
 	}
 
+	size_t len_1 = 0;
+	size_t len_2 = 0;
+	if (a_len >= b_len) {
+
+	}
+	else {
+
+	}
 	
 
-	for (int i = 0;i < b_len;i++) {
+	for (int i = 0;i < a_len;i++) {
 		int first_operand = a[a_len - i - 1] - '0';
 		if (first_operand == 0) {
 			continue;
 		}
-		for (int j = 0;j < a_len ;j++) {
+		for (int j = 0;j < b_len ;j++) {
 			int second_operand = b[b_len - j - 1] - '0';
 			if (second_operand == 0) {
 				break;
@@ -90,7 +98,13 @@ char* multiply(const char* a, const char* b) {
 	}
 	int count = 0;
 	for (int i = max_len - 1;i >= 0;i--) {
+		int k = 5;
+		if ((multiplied_result[i]==0) && (i==max_len-1)) {
+			continue;
+		}
+		else {
 			result[count++] = (unsigned char)multiplied_result[i] + '0';
+		}
 	}
 	result[count] = '\0';
 

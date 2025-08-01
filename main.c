@@ -42,10 +42,10 @@ int main() {
 	free(dw_string);
 	*/
 	//multiply string to string
-	char* string_1 = "68323";
-	char* string_2 = "75843";
+	char* string_1 = "3333333";
+	char* string_2 = "21212121";
 	char* multiplied = multiply(string_1, string_2);
-	printf("multiplied strings :%s\n", multiplied);
+	printf("%s * %s = %s\n",string_1,string_2, multiplied);
 	free(multiplied);
 
 	clock_t end_time = clock();
