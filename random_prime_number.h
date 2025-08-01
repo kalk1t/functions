@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <Windows.h>
-#include <time.h>
 
 DWORD rand_num(DWORD processID) {
 	DWORD rand_num = processID * processID * (processID % 11) * (processID % 37);
@@ -19,8 +16,8 @@ DWORD prime_near_random_num(DWORD random_num) {
 	}
 	BOOL isprime = FALSE;
 	while (!isprime) {
-		for (DWORD next_number = random_num;next_number;next_number++) {
-			for (DWORD i = 2;i <= next_number;i++) {
+		for (DWORD next_number = random_num; next_number; next_number++) {
+			for (DWORD i = 2; i <= next_number; i++) {
 
 				if ((next_number / i) == 1 && (next_number % i) == 0) {
 					isprime = TRUE;
@@ -43,23 +40,4 @@ DWORD prime_near_random_num(DWORD random_num) {
 		}
 	}
 	return prime_number;
-}
-
-int main() {
-
-	DWORD processID = GetCurrentProcessId();
-	printf("ProcessID :%lu\n", processID);
-	DWORD random_num = rand_num(processID);
-	printf("Random num :%lu\n", random_num);
-
-	clock_t start_time = clock();
-
-	DWORD prime_num = prime_near_random_num(random_num);
-	printf("Prime Number Found: %lu\n", prime_num);
-	clock_t end_time = clock();
-	double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-	printf("Elapsed time: %.2f seconds\n", elapsed_time);
-
-
-	return 0;
 }

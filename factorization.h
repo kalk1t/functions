@@ -1,7 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <Windows.h>
 
 char* factorization(DWORD number) {
 	char* array = malloc(128);
@@ -25,15 +21,4 @@ char* factorization(DWORD number) {
 	}
 
 	return array;
-}
-
-int main() {
-
-	DWORD number = 156843;
-	printf("number :%lu\n", number);
-	char* factorized_array = factorization(number);
-	int array_len = strlen(factorized_array);
-	printf("Factor of %lu : %s ", number, factorized_array);
-	free(factorized_array);
-	return 0;
 }
