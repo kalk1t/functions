@@ -21,15 +21,12 @@ int main() {
 
 	//prime number near the random number
 	/*
-
-
 	DWORD prime_num = prime_near_random_num(random_num);
 	printf("Prime Number Found: %lu\n", prime_num);
 	*/
 
 	//random number's prime factorization 
 	/*
-
 	char* factorized = factorization(random_num);
 	printf("random number's factorization :%s\n", factorized);
 	free(factorized);
@@ -41,12 +38,15 @@ int main() {
 	printf("random number to string : %s\n", dw_string);
 	free(dw_string);
 	*/
+
 	//multiply string to string
+	
 	char* string_1 = "3333333";
 	char* string_2 = "21212121";
 	char* multiplied = multiply(string_1, string_2);
 	printf("%s * %s = %s\n",string_1,string_2, multiplied);
 	free(multiplied);
+
 
 	clock_t end_time = clock();
 	double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;

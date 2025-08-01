@@ -46,9 +46,10 @@ char* get_100k_number(const char* path, size_t* len) {
 	buffer[read] = '\0'; // Null-terminate the string
 	fclose(num_100k);
 	*len = read;
+
+
 	return buffer;
 }
-
 
 char* multiply(const char* a, const char* b) {
 
