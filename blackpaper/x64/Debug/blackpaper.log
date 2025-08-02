@@ -1,1 +1,14 @@
-﻿  blackpaper.vcxproj -> C:\Users\giorg\workingspace\blackpaper\x64\Debug\blackpaper.exe
+﻿  main.c
+C:\Users\kalki\workingspace\functions\functions.h(68,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.c')
+  
+C:\Users\kalki\workingspace\functions\main.c(53,64): warning C4133: 'function': incompatible types - from 'size_t *' to 'int *'
+C:\Users\kalki\workingspace\functions\main.c(57,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\kalki\workingspace\functions\main.c(57,9):
+      consider using '%zu' in the format string
+  
+C:\Users\kalki\workingspace\functions\big_numbers.h(70,1): warning C4716: 'karatsuba': must return a value
+C:\Users\kalki\workingspace\functions\big_numbers.h(75,1): warning C4716: 'toom_cook': must return a value
+C:\Users\kalki\workingspace\functions\big_numbers.h(80,1): warning C4716: 'schonhage_strassen': must return a value
+C:\Users\kalki\workingspace\functions\big_numbers.h(85,1): warning C4716: 'harvey_van_der_hoevem': must return a value
+  blackpaper.vcxproj -> C:\Users\kalki\workingspace\functions\x64\Debug\blackpaper.exe

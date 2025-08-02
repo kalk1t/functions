@@ -5,10 +5,8 @@
 
 
 #include "define.h"
-#include "random_prime_number.h"
-#include "factorization.h"
-#include "unlimited_random_prime_num.h"
-
+#include "functions.h"
+#include "big_numbers.h"
 
 
 int main() {
@@ -40,12 +38,45 @@ int main() {
 	*/
 
 	//multiply string to string
-	
+	/*
 	char* string_1 = "3333333";
 	char* string_2 = "21212121";
 	char* multiplied = multiply(string_1, string_2);
 	printf("%s * %s = %s\n",string_1,string_2, multiplied);
 	free(multiplied);
+	*/
+
+	
+	size_t file_size = 0;
+	char* number_in_file = get_number_from_file("digits100k.txt", &file_size);
+	size_t array_len = 0;
+	int* digits_from_file = string_to_digit_array(number_in_file, &array_len);
+	for (size_t i = 0;i < array_len;i++) {
+		printf("%d", digits_from_file[i]);
+	}
+	printf("\n%lu\n", array_len);
+	
+
+	free(number_in_file);
+	
+
+	/*
+	unsigned long long base = 2;
+	int pow = 64;
+	unsigned long long* result =power(&base, pow);
+	*result *= 1.8;
+	if (result) {
+		printf("%llu power %d = %llu\n", base, pow, *result);
+		free(result);
+	}
+	*/
+
+
+
+
+
+
+
 
 
 	clock_t end_time = clock();
