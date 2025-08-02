@@ -46,7 +46,7 @@ int main() {
 	free(multiplied);
 	*/
 
-	
+	/*
 	size_t file_size = 0;
 	char* number_in_file = get_number_from_file("digits100k.txt", &file_size);
 	size_t array_len = 0;
@@ -55,7 +55,7 @@ int main() {
 		printf("%d", digits_from_file[i]);
 	}
 	printf("\n%lu\n", array_len);
-	
+	*/
 
 	free(number_in_file);
 	

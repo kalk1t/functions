@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 char* dword_to_string(DWORD processID) {
 	char* buffer = malloc(MAX_SIZE);
 	if (!buffer) {
