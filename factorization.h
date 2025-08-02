@@ -8,7 +8,7 @@ char* factorization(DWORD number) {
 	array[0] = '\0';
 
 	DWORD buffer = number;
-	for (int i = 2;i <= buffer;i++) {
+	for (unsigned int i = 2;i <= buffer;i++) {
 		int count = 0;
 		while (buffer % i == 0) {
 			buffer /= i;

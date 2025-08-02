@@ -98,7 +98,7 @@ char* multiply(const char* a, const char* b) {
 		return NULL;
 	}
 	int count = 0;
-	for (int i = max_len - 1;i >= 0;i--) {
+	for (int i =(int) max_len - 1;i >= 0;i--) {
 		int k = 5;
 		if ((multiplied_result[i]==0) && (i==max_len-1)) {
 			continue;
