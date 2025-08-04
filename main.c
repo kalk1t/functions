@@ -55,10 +55,9 @@ int main() {
 		printf("%d", digits_from_file[i]);
 	}
 	printf("\n%lu\n", array_len);
-	*/
 
 	free(number_in_file);
-	
+	*/
 
 	/*
 	unsigned long long base = 2;
@@ -71,8 +70,15 @@ int main() {
 	}
 	*/
 
-
-
+	char* a = "1234";
+	char* b = "5678";
+	size_t* len = 0;
+	int* result = convolution(a, b,&len);
+	for (int i = 0; i < len; i++) {
+		printf("[%d]", result[i]);
+	}
+	printf("\n");
+	free(result);
 
 
 
