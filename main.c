@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <Windows.h>
 #include <time.h>
 #include <math.h>
-#include <basetsd.h>
+#include <complex.h>
 
 #include "define.h"
 #include "functions.h"
@@ -47,7 +48,7 @@ int main() {
 	free(multiplied);
 	*/
 
-
+	/*
 	size_t file_size = 0;
 	char* number_in_file = get_number_from_file("digits1k.txt", &file_size);
 	size_t array_len = 0;
@@ -61,7 +62,7 @@ int main() {
 	printf("number of chunks is : %zu\n", array_len);
 
 	free(number_in_file);
-	
+	*/
 
 	/*
 	unsigned long long base = 2;
