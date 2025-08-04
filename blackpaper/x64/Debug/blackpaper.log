@@ -1,15 +1,12 @@
 ﻿  main.c
-C:\Users\giorg\workingspace\blackpaper\functions.h(74,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kalki\workingspace\functions\functions.h(74,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'main.c')
   
-C:\Users\giorg\workingspace\blackpaper\big_numbers.h(22,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kalki\workingspace\functions\big_numbers.h(22,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'main.c')
   
-C:\Users\giorg\workingspace\blackpaper\main.c(76,33): warning C4047: 'function': 'size_t *' differs in levels of indirection from 'size_t **'
-C:\Users\giorg\workingspace\blackpaper\main.c(76,33): warning C4024: 'convolution': different types for formal and actual parameter 3
-C:\Users\giorg\workingspace\blackpaper\main.c(77,20): warning C4047: '<': 'int' differs in levels of indirection from 'size_t *'
-C:\Users\giorg\workingspace\blackpaper\functions.h(241,1): warning C4716: 'schonhage_strassen': must return a value
-C:\Users\giorg\workingspace\blackpaper\functions.h(231,1): warning C4716: 'karatsuba': must return a value
-C:\Users\giorg\workingspace\blackpaper\functions.h(236,1): warning C4716: 'toom_cook': must return a value
-C:\Users\giorg\workingspace\blackpaper\functions.h(246,1): warning C4716: 'harvey_van_der_hoevem': must return a value
-  blackpaper.vcxproj -> C:\Users\giorg\workingspace\blackpaper\x64\Debug\blackpaper.exe
+C:\Users\kalki\workingspace\functions\functions.h(231,1): warning C4716: 'karatsuba': must return a value
+C:\Users\kalki\workingspace\functions\functions.h(241,1): warning C4716: 'schonhage_strassen': must return a value
+C:\Users\kalki\workingspace\functions\functions.h(246,1): warning C4716: 'harvey_van_der_hoevem': must return a value
+C:\Users\kalki\workingspace\functions\functions.h(236,1): warning C4716: 'toom_cook': must return a value
+  blackpaper.vcxproj -> C:\Users\kalki\workingspace\functions\x64\Debug\blackpaper.exe

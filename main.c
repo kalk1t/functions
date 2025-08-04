@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <time.h>
-
+#include <math.h>
+#include <basetsd.h>
 
 #include "define.h"
 #include "functions.h"
@@ -46,18 +47,21 @@ int main() {
 	free(multiplied);
 	*/
 
-	/*
+
 	size_t file_size = 0;
-	char* number_in_file = get_number_from_file("digits100k.txt", &file_size);
+	char* number_in_file = get_number_from_file("digits1k.txt", &file_size);
 	size_t array_len = 0;
-	int* digits_from_file = string_to_digit_array(number_in_file, &array_len);
+	//int* digits_from_file = string_to_digit_array(number_in_file, &array_len);
+	const int B = 1000000;
+	int* A = parse_into_chunks(number_in_file, B, &array_len);
+
 	for (size_t i = 0;i < array_len;i++) {
-		printf("%d", digits_from_file[i]);
+		printf("A[%zu] = %d\n", i, A[i]);
 	}
-	printf("\n%lu\n", array_len);
+	printf("number of chunks is : %zu\n", array_len);
 
 	free(number_in_file);
-	*/
+	
 
 	/*
 	unsigned long long base = 2;
@@ -70,6 +74,7 @@ int main() {
 	}
 	*/
 
+	/*
 	char* a = "1234";
 	char* b = "5678";
 	size_t* len = 0;
@@ -79,6 +84,13 @@ int main() {
 	}
 	printf("\n");
 	free(result);
+	*/
+
+	/*
+	size_t n = 159;
+	size_t r = next_power_of_two(n);
+	printf("%lu\n", r);
+	*/
 
 
 
