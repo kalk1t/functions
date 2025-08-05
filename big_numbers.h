@@ -12,7 +12,7 @@ int* convolution(const char* a, const char* b,size_t* out_len) {
 	
 	for (int k = 0; k < max_len; k++) {
 		size_t res = 0;
-		for (int i = 0; i<=k; i++) {
+		for (size_t i = 0; i<=k; i++) {
 			if ((i >= a_len) || ((k - i) >= b_len)) {
 				continue;
 			}

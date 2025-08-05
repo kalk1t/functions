@@ -71,7 +71,7 @@ unsigned long long* power(unsigned long long* digit, int power) {
 }
 
 int* string_to_digit_array(const char* str, int* out_len) {
-	int len = strlen(str);
+	size_t len = strlen(str);
 	int* digits = malloc(sizeof(int) * len);
 	if (!digits) return NULL;
 
@@ -228,19 +228,23 @@ char* grade_school(const char* a, const char* b) {
 char* karatsuba(const char* a, const char* b) {
 	//O(n^1.585) good for few thousand digis
 
+	return NULL;
 }
 
 char* toom_cook(const char* a, const char* b) {
 	//O(n^1.465) good for few 10^4 digits
 
+	return NULL;
 }
 
 char* schonhage_strassen(const char* a, const char* b) {
 	//O(n log n log log n)  good for 10^4 - 10^6 digits
 
+	return NULL;
 }
 
 char* harvey_van_der_hoevem(const char* a, const char* b) {
 	//O(n log n)galactic,asymptotic optimum, hude n only
 
+	return NULL;
 }

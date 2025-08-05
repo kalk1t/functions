@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <time.h>
 #include <math.h>
-#include <complex.h>
+
 
 #include "define.h"
 #include "functions.h"
@@ -75,7 +75,7 @@ int main() {
 	}
 	*/
 
-	/*
+	
 	char* a = "1234";
 	char* b = "5678";
 	size_t* len = 0;
@@ -85,18 +85,12 @@ int main() {
 	}
 	printf("\n");
 	free(result);
-	*/
-
+	
 	/*
 	size_t n = 159;
 	size_t r = next_power_of_two(n);
-	printf("%lu\n", r);
+	printf("%l\n", r);
 	*/
-
-
-
-
-
 
 	clock_t end_time = clock();
 	double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
