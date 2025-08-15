@@ -1,10 +1,6 @@
 
 
 
-
-
-
-
 char* dword_to_string(DWORD processID) {
 	char* buffer = malloc(MAX_SIZE);
 	if (!buffer) {
@@ -70,12 +66,12 @@ unsigned long long* power(unsigned long long* digit, int power) {
 	return result;
 }
 
-int* string_to_digit_array(const char* str, int* out_len) {
+int* string_to_digit_array(const char* str, size_t* out_len) {
 	size_t len = strlen(str);
 	int* digits = malloc(sizeof(int) * len);
 	if (!digits) return NULL;
 
-	for (int i = 0;i < len;i++) {
+	for (size_t i = 0;i < len;i++) {
 		if (str[len - i - 1] >= '0' && str[len - i - 1] <= '9') {
 			digits[i] = str[len - i - 1] - '0';
 		}

@@ -2,95 +2,44 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <Windows.h>
+#include <ctype.h>
 #include <time.h>
 #include <math.h>
 
 
 #include "define.h"
 #include "functions.h"
-#include "big_numbers.h"
-
+#include "rsa.h"
 
 int main() {
 	clock_t start_time = clock();
-
 	DWORD processID = GetCurrentProcessId();
-	printf("ProcessID :%lu\n", processID);
-	DWORD random_num = rand_num_gen(processID);
-	printf("Random num :%lu\n", random_num);
 
-	//prime number near the random number
-	/*
-	DWORD prime_num = prime_near_random_num(random_num);
-	printf("Prime Number Found: %lu\n", prime_num);
-	*/
 
-	//random number's prime factorization 
-	/*
-	char* factorized = factorization(random_num);
-	printf("random number's factorization :%s\n", factorized);
-	free(factorized);
-	*/
+	size_t _size = 0;
+	char* number_in_file = get_number_from_file("digits100k.txt", &_size);
+	char* rand = random_number(number_in_file, _size,processID);
 
 	/*
-	//dword to string
-	char* dw_string = dword_to_string(random_num);
-	printf("random number to string : %s\n", dw_string);
-	free(dw_string);
-	*/
-
-	//multiply string to string
-	/*
-	char* string_1 = "3333333";
-	char* string_2 = "21212121";
-	char* multiplied = multiply(string_1, string_2);
-	printf("%s * %s = %s\n",string_1,string_2, multiplied);
-	free(multiplied);
-	*/
-
-	/*
-	size_t file_size = 0;
-	char* number_in_file = get_number_from_file("digits1k.txt", &file_size);
-	size_t array_len = 0;
-	//int* digits_from_file = string_to_digit_array(number_in_file, &array_len);
-	const int B = 1000000;
-	int* A = parse_into_chunks(number_in_file, B, &array_len);
-
-	for (size_t i = 0;i < array_len;i++) {
-		printf("A[%zu] = %d\n", i, A[i]);
+	unsigned long long last_prime = get_last_prime_fseek("prime_numbers.txt");
+	printf("Last prime number in file: %llu\n", last_prime);
+	for (unsigned long long i = last_prime; ; i++) {
+		if (is_prime(i)) {
+			collect_prime_numbers("prime_numbers.txt", i);
+		}
+		if (i == ULLONG_MAX) {
+			printf("all ull primes are collected\n");
+		}
 	}
-	printf("number of chunks is : %zu\n", array_len);
+	*/
+
+	/*
+	unsigned long long count = count_primes_in_file("prime_numbers.txt");
+	printf("%llu prime numbers are in file\n", count);
+	*/
 
 	free(number_in_file);
-	*/
 
-	/*
-	unsigned long long base = 2;
-	int pow = 64;
-	unsigned long long* result =power(&base, pow);
-	*result *= 1.8;
-	if (result) {
-		printf("%llu power %d = %llu\n", base, pow, *result);
-		free(result);
-	}
-	*/
-
-	
-	char* a = "1234";
-	char* b = "5678";
-	size_t* len = 0;
-	int* result = convolution(a, b,&len);
-	for (int i = 0; i < len; i++) {
-		printf("[%d]", result[i]);
-	}
-	printf("\n");
-	free(result);
-	
-	/*
-	size_t n = 159;
-	size_t r = next_power_of_two(n);
-	printf("%l\n", r);
-	*/
 
 	clock_t end_time = clock();
 	double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;

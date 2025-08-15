@@ -11,3 +11,5 @@ bin/
 # Libraries you don’t want in the repo
 glfw/
 
+# txt files
+*.txt
